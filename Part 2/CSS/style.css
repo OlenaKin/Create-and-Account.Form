@@ -23,15 +23,13 @@ body {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     border: 1px solid rgb(179, 25, 179);
-    max-width: 37.5rem;
+    width: 37.5rem;
     padding: 1.25rem;
     padding-left: 3rem;
     padding-right: 3rem;
-    max-height: auto;   
-
+    max-height: auto;
 
 }
-
 
 div {
     margin-bottom: 1rem;
@@ -63,44 +61,72 @@ a {
     text-decoration: none; /* Remove underline */
 }
 
-.email-block {
-    display: block;
-
-}
-
-.firstName-div,
-.lastName-div {
+.name-div,
+.email-div {
     display: inline-block;
+    margin-bottom: 1.2rem;
 
 }
 
+.country-div,
+.city-div {
+    display: inline-block;
+    margin-bottom: 1.2rem;
 
-.lastName-div label,
-.firstName-div label {
+}
+
+.zip-code-div,
+.phone-number-div{
+    display: inline-block;
+    margin-bottom: 1.2rem; 
+}
+
+
+.name-div label,
+.email-div label {
+    display: block;
+
+}
+
+.country-div label,
+.city-div label {
     display: block;
 }
 
+.zip-code-div label,
+.phone-number-div label{
+    display: block;
+}
 
-
-.form-container input,
-.form-container select {
-    width: 50%;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.name-div input,
+.email-div input {
+    width: 15.3rem;
+    height: 2.4rem;
     
 }
 
-input[type="text"],
-input[type="email"],
-select {
-
-    height: 2.3rem;
-    border-radius: 8px;
-    box-sizing: border-box;
-
-
+.country-div select,
+.city-div input {
+    width: 15.3rem;
+    height: 2.4rem;
+    
 }
 
+.zip-code-div input,
+.phone-number-div input{
+    width: 15.3rem;
+    height: 2.4rem;
+   
+}
+
+.form-container input,
+.form-container select {
+    height: 2.3rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    flex-shrink: 1;
+    box-sizing: border-box;
+}
 
 .country-div select {
     color: #999;
@@ -120,43 +146,7 @@ select:focus {
     /* Remove the default outline */
 }
 
-.lastName-div input,
-.firstName-div input {
-    width: 15.5rem;
 
-
-}
-
-.gender {
-    margin-top: 1.5rem;
-
-}
-
-.gender label {
-    display: inline-block;
-    margin-right: 1rem;
-
-
-}
-
-.gender input {
-    width: 1.25rem;
-    vertical-align: middle;
-
-
-}
-
-
-
-.email-div input {
-
-    width: 100%;
-    margin-bottom: 0.5rem;
-}
-
-.email-div-paragraph {
-    font-size: 13px;
-}
 
 .country-div label {
     display: block; /* Display block to ensure label appears above the select */
@@ -176,49 +166,16 @@ select:focus {
     background-position: right 10px top 30%, right 10px top 70%;
 }
 
-.country-div,
-.city-div {
-    display: inline-block;
-    margin-bottom: 1.2rem;
-
-}
-
-.country-div label,
-.city-div label {
-    display: block;
-}
-
-.country-div select,
-.city-div input {
-    width: 15.3rem;
-    border-radius: 8px;
-}
-
-.terms,
-.login {
-    text-align: center;
-}
-
-.terms p{
-    font-weight: 400;
-    font-size: 13px;
-    color: #969696;
-}  
 
 
-.login p{
-    font-size: 15px;
-    color: #545454;
-}
 
-.text-break {
-    display: block;
-}
+
+
 
 button {
     background-color: #007BFF;
     display: block;
-    width: 100%;
+    width: 9.37rem;
     height: 2.4rem;
     margin-bottom: 1.37rem;
     border-radius: 8px;
@@ -228,58 +185,54 @@ button {
 
 }
 
-.terms,
-.login {
-
-    width: 100%;
-    text-align: center;
-}
-
-.terms-login-break {
-    border: 0.2px solid lightgray;
-    width: 100%;
-}
-
-
-.radio-label {
+.picture-upload-label {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    background-color: #f9f9f9;
+    margin-right: 10px;
+    flex-grow: 1;
+    position: relative;
 }
 
-.radio-label input[type="radio"] {
+.picture-upload input[type="file"] {
     display: none;
+    
 }
 
-.switch-input {
+.picture-upload-label .camera-icon {
+    display: inline-block;
+    background: url('../Image/🔹\ Icon\ Color.svg') no-repeat center ;
+    background-size: contain;
+    height: 2.4rem;
+    width: 20px;
+    height: 20px;
+    text-align: right;
+}
+
+.picture-upload-label .placeholder-text {
+    color: #888;
+}
+
+.delete-button {
+    border: none;
+    background-color: white;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.delete-button {
     display: inline-block;
     width: 20px;
     height: 20px;
-    border-radius: 50%;
-    border: 0.5px solid #ccc;
-    margin-right: 10px;
-    transition: border 0.3s ease, background-color 0.3s ease;
-    vertical-align: top;
+    background: url('../Image/bin1.svg') url('../Image/bin2.svg') no-repeat center center;
+    background-size: contain;
 }
 
-.radio-label input[type="radio"]:checked+.switch-input {
-    border: 6px solid #007BFF;
-    outline: 0.5px solid #007BFF;
-    ;
-    background-color: white;
-
-
-}
-
-.radio-label input[type="radio"]:focus+.switch-input {
-    outline: 5px solid #007BFF;
-    background-color: white;
-}
-
-.radio-label input[type="radio"]:disabled+.switch-input {
-    border-color: #ddd;
-    background-color: #ddd;
-    cursor: not-allowed;
-}
