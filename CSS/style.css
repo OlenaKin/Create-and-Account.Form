@@ -111,13 +111,13 @@ select {
     color: #888;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
+input:focus,
 select:focus {
     border: 2px solid #007BFF;
     /* Change the color and width as needed */
     outline: none;
     /* Remove the default outline */
+    padding-left: 10px;
 }
 
 .lastName-div input,

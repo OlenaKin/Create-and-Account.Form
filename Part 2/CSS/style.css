@@ -24,7 +24,7 @@ body {
     font-size: 15px;
     border: 1px solid rgb(179, 25, 179);
     width: 37.5rem;
-    height: 36.8rem;
+    height: auto;
     padding: 1.25rem;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -179,12 +179,15 @@ a {
     color: #888;
 }
 
+
+
 input:focus,
 select:focus {
     border: 2px solid #007BFF;
     /* Change the color and width as needed */
-    outline: none;
+    outline: none;   
     /* Remove the default outline */
+    padding-left: 10px
 }
 
 
@@ -281,3 +284,4 @@ select:focus {
 .picture-upload-label [type="file"] {
     display: none;
 
+    
