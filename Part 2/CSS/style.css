@@ -24,10 +24,12 @@ body {
     font-size: 15px;
     border: 1px solid rgb(179, 25, 179);
     width: 37.5rem;
+    height: 36.8rem;
     padding: 1.25rem;
     padding-left: 3rem;
     padding-right: 3rem;
     max-height: auto;
+    box-sizing: border-box;
 
 }
 
@@ -128,6 +130,46 @@ a {
     box-sizing: border-box;
 }
 
+.picture-div{
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.picture-upload-div{
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 15px;
+    margin-right: 5px;
+    width: 145px;
+    height: 30px;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    cursor: pointer;
+    
+}
+
+.picture-upload-div label{
+    
+    display: flex;
+    justify-content: end;
+    align-items: center; 
+    margin: 3px;
+    margin-right: 8px;       
+    cursor: pointer; 
+    margin-bottom: 8px;
+
+}
+
+.picture-upload-div p{
+    color: #969696;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+}
+
+
+
+
 .country-div select {
     color: #999;
     /* Placeholder text color */
@@ -172,7 +214,7 @@ select:focus {
 
 
 
-button {
+.update-button {
     background-color: #007BFF;
     display: block;
     width: 9.37rem;
@@ -185,18 +227,7 @@ button {
 
 }
 
-.picture-upload-label {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    padding: 8px;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: #f9f9f9;
-    margin-right: 10px;
-    flex-grow: 1;
-    position: relative;
-}
+
 
 .picture-upload input[type="file"] {
     display: none;
@@ -205,11 +236,11 @@ button {
 
 .picture-upload-label .camera-icon {
     display: inline-block;
-    background: url('../Image/🔹\ Icon\ Color.svg') no-repeat center ;
+    background: url('../Image/🔹\ Icon\ Color1.svg') no-repeat center ;
     background-size: contain;
     height: 2.4rem;
-    width: 20px;
-    height: 20px;
+    width: 13.33px;
+    height: 22px;
     text-align: right;
 }
 
@@ -217,22 +248,60 @@ button {
     color: #888;
 }
 
-.delete-button {
-    border: none;
-    background-color: white;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
 
-.delete-button {
+
+.delete-button-div{
     display: inline-block;
-    width: 20px;
-    height: 20px;
-    background: url('../Image/bin1.svg') url('../Image/bin2.svg') no-repeat center center;
-    background-size: contain;
+    vertical-align: top;
+    margin-top: 15px;
 }
 
+
+.delete-button-div .delete-button {
+    display: flex;
+    align-items: center; 
+    justify-content: center;    
+    background: url('../Image/Trash.svg') no-repeat center ;    
+    background-color: white;
+    border: 1px solid lightgray;
+    width: 30px;  
+    height: 30px;  
+    border-radius: 8px;
+    
+}
+
+.delete-button-div .trash-bin-icon{
+    width: 1px;
+    color: lightgrey;
+} 
+
+.delete-button:hover {
+    background-color: #b9b3b3;
+}
+
+.picture-upload-label [type="file"] {
+    display: none;
+
+/*.delete-button {
+        display: inline-block;
+        background-color: white;
+        border: 1px solid lightgray;
+        border-radius: 8px;
+        cursor: pointer;
+        vertical-align: top;
+        margin-top: 15px;
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        background: url('../Image/bin1.svg') url('../Image/bin2.svg') no-repeat center center;
+        
+    }*/
+
+    input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border: 2px solid #007BFF;
+    /* Change the color and width as needed */
+    outline: none;
+    /* Remove the default outline */
+}
