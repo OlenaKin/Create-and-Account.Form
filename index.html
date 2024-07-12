@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1>Create an Account</h1>
+      <form class="form-container-form">
+        <div class="firstName-div form-group">
+          <label for="firstName" class="firstName-block">First Name</label>
+          <input type="text" id="firstName" name="firstName" required />
+        </div>
+
+        <div class="lastName-div form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required />
+        </div>
+
+        <div class="email-div form-group">
+          <label for="email" class="email-block">Email</label>
+          <input type="email" id="email" name="email" required />
+          <p class="email-div-paragraph">
+            We will never share your email with anyone
+          </p>
+        </div>
+
+        <div class="gender form-group">
+          <label class="radio-label">
+            <input type="radio" id="male" name="gender" value="male" />
+            <span class="switch-input"></span>
+            Male
+          </label>
+
+          <label class="radio-label">
+            <input type="radio" id="female" name="gender" value="female" />
+            <span class="switch-input"></span>
+            Female
+          </label>
+        </div>
+
+        <div class="country-div form-group">
+          <label for="country">Country</label>          
+          <select id="country" name="country" required>            
+            <option value="" disabled selected>Select</option>
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="au">Australia</option>
+            <option value="other">Other</option>
+            <span class="country-arrow-button"></span>
+          
+          </select>
+          
+        
+
+        
+          
+        </div>
+
+        <div class="city-div form-group">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" required />
+        </div>
+
+        <button type="submit" class="signIn-button">Sign up</button>
+
+        <div class="terms form-group">
+          <p>
+            By clicking the 'Sign Up' button, you confirm that you accept our
+            <span class="text-break"
+              ><a href="#">Terms of use</a> and
+              <a href="#">Privacy Policy.</a></span
+            >
+          </p>
+        </div>
+
+        <div class="terms-login-break"></div>
+
+        <div class="login form-group">
+          <p>Have an account? <a href="#"> <span>Log In</span> </a></p>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
